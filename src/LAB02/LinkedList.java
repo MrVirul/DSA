@@ -14,5 +14,9 @@ public class LinkedList {
     public int getSize() {
         return size;
     }
-
+    public void addFirst(int data) {
+        if(isEmpty()) {
+            head = new ChainNode(data);
+        }
+    }
 }
