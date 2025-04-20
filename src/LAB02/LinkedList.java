@@ -17,6 +17,15 @@ public class LinkedList {
     public void addFirst(int data) {
         if(isEmpty()) {
             head = new ChainNode(data);
+        } else {
+            head = new ChainNode(data, head);
+        }
+    }
+    public void addLast(int data) {
+        if (isEmpty()){
+            head = new ChainNode(data);
+        }else {
+
         }
     }
 }
