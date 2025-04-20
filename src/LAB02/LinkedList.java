@@ -53,12 +53,27 @@ public class LinkedList {
     }
 
     public int removeLast() {
+        int removedata = 0;
         if (isEmpty()) {
             System.out.println("List is empty");
         }else {
             if(size == 1) {
-
+                removedata = head.data;
+                head = null;
+            }
+            else {
+                ChainNode temp = head;
+                while (temp.next != null){
+                    if (temp.next.next != null) {
+                        temp = temp.next;
+                    }
+                    removedata = temp.next.data;
+                    temp.next = null;
+                }
+                size--;
             }
         }
+        return removedata;
     }
+    
 }
